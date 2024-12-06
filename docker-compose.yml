@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     build:
-      context: ./exchange-rates
+      context: ./exchange_rates
       dockerfile: Dockerfile
     container_name: exchange-rates-backend
     command: >
@@ -12,7 +12,7 @@ services:
       - "8000:8000"
       - "5678:5678"
     env_file:
-      - ./exchange-rates/.env
+      - ./exchange_rates/.env
     deploy:
       resources:
         limits:
