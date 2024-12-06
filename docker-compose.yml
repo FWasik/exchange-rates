@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./exchange-rates
+      dockerfile: Dockerfile
+    container_name: exchange-rates-backend
+    command: >
+      sh -c "python3 -m debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+      - "5678:5678"
+    env_file:
+      - ./exchange-rates/.env
+    deploy:
+      resources:
+        limits:
+          memory: 512M 
+        reservations:
+          memory: 256M
