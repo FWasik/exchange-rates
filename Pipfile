@@ -9,6 +9,7 @@ python-dotenv = "*"
 debugpy = "*"
 requests = "*"
 djangorestframework = "*"
+black = "*"
 
 [dev-packages]
 

@@ -14,7 +14,7 @@ class Command(BaseCommand):
 
         for code in self.REQUIRED_CURRENCIES:
             currency, created = Currency.objects.get_or_create(code=code)
-            
+
             if created:
                 logger.info(f"Currency {code} created")
             else:

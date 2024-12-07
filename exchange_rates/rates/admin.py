@@ -5,7 +5,7 @@ from .models import Currency, ExchangeRate
 @admin.register(Currency)
 class CurrencyAdmin(admin.ModelAdmin):
     list_display = ("id", "code")
-    
+
 
 @admin.register(ExchangeRate)
 class ExchangeRateAdmin(admin.ModelAdmin):

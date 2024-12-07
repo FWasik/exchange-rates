@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('rates', '0001_initial'),
+        ("rates", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='exchangerate',
-            name='timestamp',
+            model_name="exchangerate",
+            name="timestamp",
             field=models.DateTimeField(default=rates.models.get_default_time),
         ),
     ]
