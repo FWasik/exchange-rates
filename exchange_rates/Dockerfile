@@ -5,7 +5,7 @@ WORKDIR /app/exchange-rates
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY . .
+COPY . /app/exchange-rates
 
 RUN pip install --upgrade pip
 
