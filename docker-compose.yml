@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   backend:
+    image: exchange-rates
     build:
       context: ./exchange_rates
       dockerfile: Dockerfile
